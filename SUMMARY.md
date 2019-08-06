@@ -3,7 +3,7 @@
 * [IQA V3 起步](./README.md)
 * [版本更新（老用户必看）](./版本更新/v3.1.md)
 * [语句结构（我写的指令到底是什么？）](./语句结构/index.md)
-    * [符 RunSymbol](./语句结构/runSymbol.md)
+    * [运行符 RunSymbol](./语句结构/runSymbol.md)
     * [指令名与对象 APC & Target](./语句结构/apc&target.md)
     * [标签与参数 Props & Attr](./语句结构/props&attr.md)
     * [小节](./语句结构/summary.md)

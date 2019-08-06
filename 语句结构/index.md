@@ -5,6 +5,14 @@
 ### 按行分割
 > IQA 演出脚本的语句通常由一行来界定有效的指令，所以如果使用指令则一定要严格按照行为单位，不可多个指令写入在一行中。
 
+### 拆分一句 IQA 指令
+这是一句图层动画指令，用于操作图层进行运动：
+```sql
+@avg.animation BG1 x=10 time=250 repeat=10 yoyo
+```
+在解析的过程中时，每一句演出脚本都会按照下方的形式转化为**结构体**：
+![一句图层动画指令的拆分图](https://new-image.iqing.com/play/5eb7c9f6-5fe6-45f9-9220-87b5d3a5c1e2.png)  
+**<font color=ea6a6e size=48>注：props 和 attr 的书写位置只需在 target 右侧即可，两者没有前后顺序的要求</font>**  
 
 ### 指令由哪些部分构成
 一个有效的 IQA 指令暴露给开发者一共分5个部分：
@@ -35,15 +43,6 @@ Props|参数，对 APC 的运行的说明|左右值使用 "=" 连接
 │   │   ├ - Props 2
 │   │   ├ - .......
 ```
-### 拆分一句 IQA 指令
-这是一句图层动画指令，用于操作图层进行运动：
-```sql
-@avg.animation BG1 x=10 time=250 repeat=10 yoyo
-```
-在解析的过程中时，每一句演出脚本都会按照下方的形式转化为**结构体**：
-![一句图层动画指令的拆分图](https://new-image.iqing.com/play/5eb7c9f6-5fe6-45f9-9220-87b5d3a5c1e2.png)  
-**<font color=orange size=48>注：props 和 attr 的书写位置只需在 target 右侧即可，两者没有前后顺序的要求</font>**
-
 
 ### 解析失败的指令会如何？
 让我们先来看一段简易的段落

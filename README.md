@@ -1,7 +1,7 @@
 # IQA 引擎是什么？
  
 **一种视觉演绘小说解决方案，赋能于开发者，支持「文字剧本、2D图层、音频」等功能。**  
-<video width=100% height=auto id="video" controls preload="auto" poster="./res/image/logo.png" src="./res/video/寻迹.mov" autoplay>
+<video width=100% height=auto id="video" preload="auto" poster="./res/image/logo.png" src="./res/video/寻迹.mov" controls autoplay style="outline: none;">
 </video>
 <font color=#aeaeae>上方片段节选自「寻迹」</font>，较为复杂的效果需要开发者通过编写 [APC 指令](./指令大全/README.md) 实现效果。  
 IQA 引擎在运行中解析来自上层开发者编写的脚本，底层使用<font color=#ea6a6e> JavaScript </font>实现具体功能，向用户呈现演出。  
@@ -12,7 +12,8 @@ IQA 引擎在运行中解析来自上层开发者编写的脚本，底层使用<
 ---
 
 ### 快速起步（新手必看）
-+ 打开对话框，编写演出剧本  
+  
+#### 打开对话框，编写演出剧本  
 这里节选了一段「寻迹」的开场脚本，其中的 msgdia 指令可以打开对话框，  
 <font color=#ea6a6e>
 **"@" 是一种[运行符](./语句结构/runSymbol.md)，所有的指令必须搭配运行符才能生效**。   
@@ -26,7 +27,7 @@ IQA 引擎在运行中解析来自上层开发者编写的脚本，底层使用<
 有些年岁的椅子发出磨牙般尖锐刺耳的噪音，我挺了挺身，不敢太过放松了。
 来到新的岗位已经一周，却依然难以适应新的环境。
 ```
-+ 控制对话框的显示，并通过 p 指令来渐进触发演出  
+#### 控制对话框的显示，并通过 p 指令来渐进触发演出  
 通常情况下，演出可能会希望台词按照用户的点击来渐进触发。  
 这时可以使用 p 指令实现等待，并且可以通过 msgoff 来暂时关闭对话框。  
 <font color=#ea6a6e>
@@ -43,17 +44,38 @@ IQA 引擎在运行中解析来自上层开发者编写的脚本，底层使用<
 有些年岁的椅子发出磨牙般尖锐刺耳的噪音，我挺了挺身，不敢太过放松了。[p]
 来到新的岗位已经一周，却依然难以适应新的环境。
 ```
-<video width=100% height=auto id="video" preload="auto" src="./res/video/寻迹开场文本演示.mov?v=1" loop autoplay>
-</video>  
-+ 创建图层   
-<font color=#ea6a6e>**IQA 的图层在 v3 中需要开发者手动创建**</font>
+<video width=100% height=auto id="video" preload="auto" src="./res/video/寻迹开场文本演示.mov?v=1" controls loop autoplay style="outline: none;"></video>  
+#### 创建图层   
+<font color=#ea6a6e>**不同于 v2.x，在 IQA v3 中图层需要开发者手动创建**</font>
 ```ruby
+; 创建一个名为 CHR1 的图层，并对其设置纹理(图片)并且设置为完全透明
 @avg.create CHR1
 @avg.set CHR1 url=轻文娘_立绘 alpha=0
+; 让 CHR1 运行动画：通过 1000 ms 的时间不透明度从 0 运动至 1，图层将具有渐入效果显示
 @avg.animation CHR1 alpha=1 time=1000
 ``` 
-+ 播放音频  
-<font color=red>TODO</font>   
+清理一个图层，将其恢复至初始状态：
+```ruby
+@avg.clear CHR1
+```
+如果您希望完全控制图层的删除，可以使用 avg.break   
+**它会完全删除一个图层，并且摧毁其中的纹理数据，释放该图层的所有内存引用：**
+```ruby
+; 如使用该指令摧毁后，"轻文娘_立绘" 资源将不能再次在章节内使用，CHR1 图层也将消失
+@avg.break CHR1
+```
+  
+####播放音频  
+<font color=#ea6a6e>**在 IQA v3 中音频名依然是内置的，比如我们调用 BGM1 的音轨**</font>
+```ruby
+; 在 BGM1 音轨上播放名为 "轻文主题曲" 的音频，渐入时间为 1000 ms
+@play BGM1 url=轻文主题曲 time=1000
+```
+在某处停止 BGM1 播放的音频，同样设置渐出时间为 1000 ms：
+```ruby
+@stop BGM1 time=1000
+```
+
 ---
 
 ### 准备好了吗？
