@@ -1,0 +1,741 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>全屏文本框 msgmono · IQA-Engine</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="August-Z">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="msgoff.html" />
+    
+    
+    <link rel="prev" href="msgdia.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    IQA V3 起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../版本更新/v3.1.html">
+            
+                <a href="../../版本更新/v3.1.html">
+            
+                    
+                    版本更新（老用户必看）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../语句结构/">
+            
+                <a href="../../语句结构/">
+            
+                    
+                    语句结构（我写的指令到底是什么？）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../语句结构/runSymbol.html">
+            
+                <a href="../../语句结构/runSymbol.html">
+            
+                    
+                    运行符 RunSymbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../语句结构/apc&target.html">
+            
+                <a href="../../语句结构/apc&target.html">
+            
+                    
+                    指令名与对象 APC & Target
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../语句结构/props&attr.html">
+            
+                <a href="../../语句结构/props&attr.html">
+            
+                    
+                    标签与参数 Props & Attr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../语句结构/summary.html">
+            
+                <a href="../../语句结构/summary.html">
+            
+                    
+                    小节
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    指令大全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../书写指令/">
+            
+                <a href="../书写指令/">
+            
+                    
+                    书写指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../书写指令/L.html">
+            
+                <a href="../书写指令/L.html">
+            
+                    
+                    等待 l
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../书写指令/P.html">
+            
+                <a href="../书写指令/P.html">
+            
+                    
+                    清屏等待 p
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../书写指令/R.html">
+            
+                <a href="../书写指令/R.html">
+            
+                    
+                    换行 r
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../图层指令/">
+            
+                <a href="../图层指令/">
+            
+                    
+                    图层指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../图层指令/create.html">
+            
+                <a href="../图层指令/create.html">
+            
+                    
+                    创建图层 avg.create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../图层指令/set.html">
+            
+                <a href="../图层指令/set.html">
+            
+                    
+                    修改图层 avg.set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../图层指令/animation.html">
+            
+                <a href="../图层指令/animation.html">
+            
+                    
+                    图层动画 avg.animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../图层指令/clear.html">
+            
+                <a href="../图层指令/clear.html">
+            
+                    
+                    重置图层 avg.clear
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../图层指令/break.html">
+            
+                <a href="../图层指令/break.html">
+            
+                    
+                    销毁图层 avg.break
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../音频指令/">
+            
+                <a href="../音频指令/">
+            
+                    
+                    音频指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../音频指令/play.html">
+            
+                <a href="../音频指令/play.html">
+            
+                    
+                    播放 play
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../音频指令/stop.html">
+            
+                <a href="../音频指令/stop.html">
+            
+                    
+                    停止 stop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    界面指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="msgdia.html">
+            
+                <a href="msgdia.html">
+            
+                    
+                    对话文本框 msgdia
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4.2" data-path="msgmono.html">
+            
+                <a href="msgmono.html">
+            
+                    
+                    全屏文本框 msgmono
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="msgoff.html">
+            
+                <a href="msgoff.html">
+            
+                    
+                    关闭文本框 msgoff
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="diaface.html">
+            
+                <a href="diaface.html">
+            
+                    
+                    角色头像 diaface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="dianame.html">
+            
+                <a href="dianame.html">
+            
+                    
+                    角色名称 dianame
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../赋值操作指令/">
+            
+                <a href="../赋值操作指令/">
+            
+                    
+                    赋值操作指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../赋值操作指令/var.html">
+            
+                <a href="../赋值操作指令/var.html">
+            
+                    
+                    设置变量 var
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../赋值操作指令/if.html">
+            
+                <a href="../赋值操作指令/if.html">
+            
+                    
+                    判断变量 if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../赋值操作指令/calc.html">
+            
+                <a href="../赋值操作指令/calc.html">
+            
+                    
+                    计算变量 calc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../赋值操作指令/break.html">
+            
+                <a href="../赋值操作指令/break.html">
+            
+                    
+                    销毁变量 break
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../流程控制指令/">
+            
+                <a href="../流程控制指令/">
+            
+                    
+                    流程控制指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../流程控制指令/sel.html">
+            
+                <a href="../流程控制指令/sel.html">
+            
+                    
+                    选择支 sel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../流程控制指令/flag.html">
+            
+                <a href="../流程控制指令/flag.html">
+            
+                    
+                    标记书签 flag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../流程控制指令/jump.html">
+            
+                <a href="../流程控制指令/jump.html">
+            
+                    
+                    跳转书签 jump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >全屏文本框 msgmono</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5168;&#x5C4F;&#x6587;&#x672C;&#x6846;-msgmono">&#x5168;&#x5C4F;&#x6587;&#x672C;&#x6846; msgmono</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="msgdia.html" class="navigation navigation-prev " aria-label="Previous page: 对话文本框 msgdia">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="msgoff.html" class="navigation navigation-next " aria-label="Next page: 关闭文本框 msgoff">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"全屏文本框 msgmono","level":"1.4.4.2","depth":3,"next":{"title":"关闭文本框 msgoff","level":"1.4.4.3","depth":3,"path":"指令大全/界面指令/msgoff.md","ref":"./指令大全/界面指令/msgoff.md","articles":[]},"previous":{"title":"对话文本框 msgdia","level":"1.4.4.1","depth":3,"path":"指令大全/界面指令/msgdia.md","ref":"./指令大全/界面指令/msgdia.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","prism","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"August-Z","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IQA-Engine","gitbook":"*"},"file":{"path":"指令大全/界面指令/msgmono.md","mtime":"2019-08-02T14:07:34.490Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T10:00:18.292Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

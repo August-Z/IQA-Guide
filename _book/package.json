@@ -1,0 +1,20 @@
+{
+  "name": "iqa-engine-guide",
+  "version": "3.1.0",
+  "description": "The Guide of IQA-Engine",
+  "main": "README.md",
+  "dependencies": {
+    "gitbook-plugin-prism": "^2.4.0",
+    "gitbook-plugin-sharing-plus": "^0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "gitbook init && gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@stynx.iqing.in:august/iqa-engine-guide.git"
+  },
+  "author": "August-Z",
+  "license": "MIT"
+}

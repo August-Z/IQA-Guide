@@ -9,11 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "gitbook serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@stynx.iqing.in:august/iqa-engine-guide.git"
+    "dev": "gitbook init && gitbook serve"
   },
   "author": "August-Z",
   "license": "MIT"
