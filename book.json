@@ -5,9 +5,23 @@
   "plugins": [
     "-sharing",
     "sharing-plus",
-    "prism"
+    "prism",
+    "github",
+    "github-buttons"
   ],
   "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/August-Z/IQA-Guide"
+    },
+    "github-buttons": {
+      "buttons": [{
+        "user": "kuangshp",
+        "repo": "mysql",
+        "type": "star",
+        "size": "small",
+        "count": true
+      }]
+    },
     "sharing": {
       "douban": false,
       "facebook": false,
