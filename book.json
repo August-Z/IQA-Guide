@@ -1,8 +1,12 @@
 {
-    "title": "IQA-Engine",
-    "author": "August-Z",
-    "root": ".",
-  "plugins": ["-sharing", "sharing-plus","prism"],
+  "title": "IQA-Engine",
+  "author": "August-Z",
+  "root": ".",
+  "plugins": [
+    "-sharing",
+    "sharing-plus",
+    "prism"
+  ],
   "pluginsConfig": {
     "sharing": {
       "douban": false,
@@ -23,9 +27,14 @@
       "weibo": true,
       "whatsapp": false,
       "all": [
-        "facebook", "google", "twitter",
-        "weibo", "qq", "linkedin",
-        "qzone", "douban"
+        "facebook",
+        "google",
+        "twitter",
+        "weibo",
+        "qq",
+        "linkedin",
+        "qzone",
+        "douban"
       ]
     },
     "prism": {
@@ -34,7 +43,7 @@
       ]
     },
     "fontsettings": {
-	  "theme": "white"
+      "theme": "white"
     }
   }
 }
